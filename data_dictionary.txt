@@ -1,0 +1,438 @@
+# dHCT Data Dictionary
+
+## Demographic Data
+demographic_data.csv
+
+| Variable         | Type      | Description                       | Values                                                            |
+|------------------|-----------|-----------------------------------|-------------------------------------------------------------------|
+| STUDY_PRTCPT_ID  | Character | Anonymized participant identifier | P001-P999                                                         |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| arm              | Character | Study arm assignment              | "Intervention", "Control"                                         |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| cg_hours         | Character | Caregiver weekly commitment       | "Less than or equal to 40 hours", "More than 40 hours"            |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| age              | Character | Age category                      | "18-39", "40-60", "61+"                                           |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| gender           | Character | Participant gender                | "Male", "Female"                                                  |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| monthly_income   | Character | Monthly household income category | "< Less than $1,000", "$1,000-$2,999", "$3,000-$4,999",           |
+|                  |           |                                   | "$5,000-$6,999", "Greater than or equal to $7,000"                |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| transplant_type  | Character | Type of transplant                | "Autologous", "Allogeneic"                                        |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| dyad_id          | Integer   | Identifier for patient-caregiver  | 1, 2, 3, ...                                                      |
+|                  |           | pair                              |                                                                   |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| role             | Character | Participant role                  | "Patients", "Caregivers"                                          |
+|__________________|___________|___________________________________|___________________________________________________________________|
+| in_hospital_days | Character | Number of days spent in hospital  | Numeric or "NA - OHSU"                                            |
+|__________________|___________|___________________________________|___________________________________________________________________|
+
+## Mood Data
+mood.csv
+
+| Variable           | Type      | Description                       | Values                        |
+|--------------------|-----------|-----------------------------------|-------------------------------|
+| STUDY_PRTCPT_ID    | Character | Anonymized participant identifier | P001-P999                     |
+|____________________|___________|___________________________________|_______________________________|
+| MOOD               | Integer   | Self-reported mood score          | 1-10 (1=worst, 10=best)       |
+|____________________|___________|___________________________________|_______________________________|
+| time_stamp         | Character | Time of mood report               | HH:MM:SS (24-hour format)     |
+|____________________|___________|___________________________________|_______________________________|
+| Group              | Character | Participant group                 | "Patients", "Caregivers"      |
+|____________________|___________|___________________________________|_______________________________|
+| DaysFromTransplant | Integer   | Days since transplant             | 0-120                         |
+|____________________|___________|___________________________________|_______________________________|
+
+## Heart Rate Data
+hr.csv
+
+| Variable             | Type      | Description                       | Values                        |
+|----------------------|-----------|-----------------------------------|-------------------------------|
+| STUDY_PRTCPT_ID      | Character | Anonymized participant identifier | P001-P999                     |
+|______________________|___________|___________________________________|_______________________________|
+| STUDY_METRIC_MSR_VAL | Integer   | Heart rate measurement            | 30-200 bpm                    |
+|______________________|___________|___________________________________|_______________________________|
+| time_stamp           | Character | Time of measurement               | HH:MM:SS (24-hour format)     |
+|______________________|___________|___________________________________|_______________________________|
+| Group                | Character | Participant group                 | "Patients", "Caregivers"      |
+|______________________|___________|___________________________________|_______________________________|
+| DaysFromTransplant   | Integer   | Days since transplant             | 0-120                         |
+|______________________|___________|___________________________________|_______________________________|
+
+## Classic Sleep Data
+sleep_classic.csv
+
+| Variable           | Type      | Description                       | Values/Units                  |
+|--------------------|-----------|-----------------------------------|-------------------------------|
+| STUDY_PRTCPT_ID    | Character | Anonymized participant identifier | Format: "P###"                |
+|____________________|___________|___________________________________|_______________________________|
+| Group              | Character | Participant category              | "Patients", "Caregivers"      |
+|____________________|___________|___________________________________|_______________________________|
+| DaysFromTransplant | Integer   | Days since transplant             | 0-120                         |
+|____________________|___________|___________________________________|_______________________________|
+| SLEEP_START_TIME   | Character | Sleep period start time           | HH:MM:SS (24-hour format)     |
+|____________________|___________|___________________________________|_______________________________|
+| SLEEP_END_TIME     | Character | Sleep period end time             | HH:MM:SS (24-hour format)     |
+|____________________|___________|___________________________________|_______________________________|
+| sleep_duration     | Numeric   | Duration of sleep period          | Hours                         |
+|____________________|___________|___________________________________|_______________________________|
+| ASLEEP_VALUE       | Integer   | Total minutes asleep              | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| INBED_VALUE        | Integer   | Total minutes in bed              | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| ASLEEP_MIN         | Integer   | Minutes scored as asleep          | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| ASLEEP_COUNT       | Integer   | Number of sleep episodes          | Count                         |
+|____________________|___________|___________________________________|_______________________________|
+| AWAKE_COUNT        | Integer   | Number of awake episodes          | Count                         |
+|____________________|___________|___________________________________|_______________________________|
+| AWAKE_MIN          | Integer   | Minutes scored as awake           | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| RESTLESS_COUNT     | Integer   | Number of restless episodes       | Count                         |
+|____________________|___________|___________________________________|_______________________________|
+| RESTLESS_MIN       | Integer   | Minutes scored as restless        | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| TYPE               | Character | Sleep measurement type            | "classic"                     |
+|____________________|___________|___________________________________|_______________________________|
+
+## Stages Sleep Data
+sleep_stages.csv
+
+| Variable           | Type      | Description                       | Values/Units                  |
+|--------------------|-----------|-----------------------------------|-------------------------------|
+| STUDY_PRTCPT_ID    | Character | Anonymized participant identifier | Format: "P###"                |
+|____________________|___________|___________________________________|_______________________________|
+| Group              | Character | Participant category              | "Patients", "Caregivers"      |
+|____________________|___________|___________________________________|_______________________________|
+| DaysFromTransplant | Integer   | Days since transplant             | 0-120                         |
+|____________________|___________|___________________________________|_______________________________|
+| SLEEP_START_TIME   | Character | Sleep period start time           | HH:MM:SS (24-hour format)     |
+|____________________|___________|___________________________________|_______________________________|
+| SLEEP_END_TIME     | Character | Sleep period end time             | HH:MM:SS (24-hour format)     |
+|____________________|___________|___________________________________|_______________________________|
+| sleep_duration     | Numeric   | Duration of sleep period          | Hours                         |
+|____________________|___________|___________________________________|_______________________________|
+| ASLEEP_VALUE       | Integer   | Total minutes asleep              | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| INBED_VALUE        | Integer   | Total minutes in bed              | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| DEEP_MIN           | Integer   | Minutes in deep sleep             | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| LIGHT_MIN          | Integer   | Minutes in light sleep            | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| REM_MIN            | Integer   | Minutes in REM sleep              | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| WAKE_MIN           | Integer   | Minutes awake during sleep        | Minutes                       |
+|____________________|___________|___________________________________|_______________________________|
+| DEEP_COUNT         | Integer   | Number of deep sleep episodes     | Count                         |
+|____________________|___________|___________________________________|_______________________________|
+| LIGHT_COUNT        | Integer   | Number of light sleep episodes    | Count                         |
+|____________________|___________|___________________________________|_______________________________|
+| REM_COUNT          | Integer   | Number of REM sleep episodes      | Count                         |
+|____________________|___________|___________________________________|_______________________________|
+| WAKE_COUNT         | Integer   | Number of wake episodes           | Count                         |
+|____________________|___________|___________________________________|_______________________________|
+
+## Steps Data
+steps.csv
+
+
+| Variable             | Type      | Description                       | Values                        |
+|----------------------|-----------|-----------------------------------|-------------------------------|
+| STUDY_PRTCPT_ID      | Character | Anonymized participant identifier | P001-P999                     |
+|______________________|___________|___________________________________|_______________________________|
+| STUDY_METRIC_MSR_VAL | Integer   | Number of steps in the minute     | 0+                            |
+|______________________|___________|___________________________________|_______________________________|
+| time_stamp           | Character | Time of measurement               | HH:MM:SS (24-hour format)     |
+|______________________|___________|___________________________________|_______________________________|
+| Group                | Character | Participant group                 | "Patients", "Caregivers"      |
+|______________________|___________|___________________________________|_______________________________|
+| DaysFromTransplant   | Integer   | Days since transplant             | 0-120                         |
+|______________________|___________|___________________________________|_______________________________|
+
+## Activity Data
+activity.csv
+
+| Variable             | Type      | Description                       | Values                                                           |
+|----------------------|-----------|-----------------------------------|------------------------------------------------------------------|
+| STUDY_PRTCPT_ID      | Character | Anonymized participant identifier | P001-P999                                                        |
+|______________________|___________|___________________________________|__________________________________________________________________|
+| STUDY_METRIC_TYP_ID  | Integer   | Activity type identifier          | 4 (sedentary), 5 (lightly active), 6 (moderately active),        |
+|                      |           |                                   | 7 (very active)                                                  |
+|______________________|___________|___________________________________|__________________________________________________________________|
+| activity_type        | Character | Activity intensity category       | "sedentary", "lightly_active", "moderately_active", "very_active"|
+|______________________|___________|___________________________________|__________________________________________________________________|
+| STUDY_METRIC_MSR_VAL | Integer   | Duration of activity              | Minutes                                                          |
+|______________________|___________|___________________________________|__________________________________________________________________|
+| time_stamp           | Character | Time of measurement               | HH:MM:SS (24-hour format)                                        |
+|______________________|___________|___________________________________|__________________________________________________________________|
+| Group                | Character | Participant group                 | "Patients", "Caregivers"                                         |
+|______________________|___________|___________________________________|__________________________________________________________________|
+| DaysFromTransplant   | Integer   | Days since transplant             | 0-120                                                            |
+|______________________|___________|___________________________________|__________________________________________________________________|
+
+
+## Daily Heart Rate Summary
+daily_hr.csv
+
+| Variable            | Type      | Description                         | Values                        |
+|---------------------|-----------|-------------------------------------|-------------------------------|
+| STUDY_PRTCPT_ID     | Character | Anonymized participant identifier   | P001-P999                     |
+|_____________________|___________|_____________________________________|_______________________________|
+| DaysFromTransplant  | Integer   | Days since transplant               | 0-120                         |
+|_____________________|___________|_____________________________________|_______________________________|
+| mean_hr             | Numeric   | Mean heart rate for the day         | 30-200 bpm                    |
+|_____________________|___________|_____________________________________|_______________________________|
+| median_hr           | Numeric   | Median heart rate for the day       | 30-200 bpm                    |
+|_____________________|___________|_____________________________________|_______________________________|
+| min_hr              | Numeric   | Minimum heart rate for the day      | 30-200 bpm                    |
+|_____________________|___________|_____________________________________|_______________________________|
+| max_hr              | Numeric   | Maximum heart rate for the day      | 30-200 bpm                    |
+|_____________________|___________|_____________________________________|_______________________________|
+| sd_hr               | Numeric   | Standard deviation of heart rate    | bpm                           |
+|_____________________|___________|_____________________________________|_______________________________|
+| morning_hr          | Numeric   | Mean heart rate 6:00-12:00          | 30-200 bpm                    |
+|_____________________|___________|_____________________________________|_______________________________|
+| afternoon_hr        | Numeric   | Mean heart rate 12:00-18:00         | 30-200 bpm                    |
+|_____________________|___________|_____________________________________|_______________________________|
+| evening_hr          | Numeric   | Mean heart rate 18:00-24:00         | 30-200 bpm                    |
+|_____________________|___________|_____________________________________|_______________________________|
+| night_hr            | Numeric   | Mean heart rate 0:00-6:00           | 30-200 bpm                    |
+|_____________________|___________|_____________________________________|_______________________________|
+| time_coverage       | Numeric   | Proportion of day with valid        | 0-1                           |
+|                     |           | measurements                        |                               |
+|_____________________|___________|_____________________________________|_______________________________|
+| Group               | Character | Participant group                   | "Patients", "Caregivers"      |
+|_____________________|___________|_____________________________________|_______________________________|
+
+## Daily Step Summary
+daily_steps.csv
+
+| Variable           | Type      | Description                         | Values                        |
+|--------------------|-----------|-------------------------------------|-------------------------------|
+| STUDY_PRTCPT_ID    | Character | Anonymized participant identifier   | P001-P999                     |
+|____________________|___________|_____________________________________|_______________________________|
+| DaysFromTransplant | Integer   | Days since transplant               | 0-120                         |
+|____________________|___________|_____________________________________|_______________________________|
+| total_steps        | Integer   | Total steps for the day             | 0+                            |
+|____________________|___________|_____________________________________|_______________________________|
+| n_measurements     | Integer   | Number of measurements              | 0-1440                        |
+|____________________|___________|_____________________________________|_______________________________|
+| time_coverage      | Numeric   | Proportion of day with valid        | 0-1                           |
+|                    |           | measurements                        |                               |
+|____________________|___________|_____________________________________|_______________________________|
+| Group              | Character | Participant group                   | "Patients", "Caregivers"      |
+|____________________|___________|_____________________________________|_______________________________|
+
+
+## Daily Activity Summary
+daily_activity.csv
+
+| Variable            | Type      | Description                         | Values                        |
+|---------------------|-----------|-------------------------------------|-------------------------------|
+| STUDY_PRTCPT_ID     | Character | Anonymized participant identifier   | P001-P999                     |
+|_____________________|___________|_____________________________________|_______________________________|
+| DaysFromTransplant  | Integer   | Days since transplant               | 0-120                         |
+|_____________________|___________|_____________________________________|_______________________________|
+| sedentary           | Integer   | Minutes of sedentary activity       | 0-1440                        |
+|_____________________|___________|_____________________________________|_______________________________|
+| lightly_active      | Integer   | Minutes of light activity           | 0-1440                        |
+|_____________________|___________|_____________________________________|_______________________________|
+| moderately_active   | Integer   | Minutes of moderate activity        | 0-1440                        |
+|_____________________|___________|_____________________________________|_______________________________|
+| very_active         | Integer   | Minutes of vigorous activity        | 0-1440                        |
+|_____________________|___________|_____________________________________|_______________________________|
+| total_active_time   | Integer   | Total minutes of non-sedentary      | 0-1440                        |
+|                     |           | activity                            |                               |
+|_____________________|___________|_____________________________________|_______________________________|
+| total_measured_time | Integer   | Total minutes measured              | 0-1440                        |
+|_____________________|___________|_____________________________________|_______________________________|
+| percent_sedentary   | Numeric   | Percentage of measured time spent   | 0-100                         |
+|                     |           | sedentary                           |                               |
+|_____________________|___________|_____________________________________|_______________________________|
+| percent_active      | Numeric   | Percentage of measured time spent   | 0-100                         |
+|                     |           | active                              |                               |
+|_____________________|___________|_____________________________________|_______________________________|
+| time_coverage       | Numeric   | Proportion of day with valid        | 0-1                           |
+|                     |           | measurements                        |                               |
+|_____________________|___________|_____________________________________|_______________________________|
+| Group               | Character | Participant group                   | "Patients", "Caregivers"      |
+|_____________________|___________|_____________________________________|_______________________________|
+
+
+## PROMIS T-Score Data
+PROMIS_tscore.csv
+
+| Variable       | Type      | Description                       | Values                    | Notes                                |
+|----------------|-----------|-----------------------------------|---------------------------|--------------------------------------|
+| STUDY_PRTCPT_ID| Character | Anonymized participant identifier | Format: "P###"            |                                      |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| Timestamp      | Character | Survey collection timepoint       | "Baseline", "Day30",      |                                      |
+|                |           |                                   | "Day120"                  |                                      |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| Group          | Character | Participant category              | "Patients", "Caregivers"  |                                      |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_comp         | Numeric   | Companionship T-score             | 0-100                     | Higher scores indicate better        |
+|                |           |                                   |                           | companionship                        |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_glohlth_mh   | Numeric   | Global mental health T-score      | 0-100                     | Higher scores indicate better        |
+|                |           |                                   |                           | mental health                        |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_glohlth_ph   | Numeric   | Global physical health T-score    | 0-100                     | Higher scores indicate better        |
+|                |           |                                   |                           | physical health                      |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_abroact      | Numeric   | Ability to participate in social  | 0-100                     | Higher scores indicate better        |
+|                |           | roles and activities T-score      |                           | participation ability                |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_anxty        | Numeric   | Anxiety T-score                   | 0-100                     | Higher scores indicate more anxiety  |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_cogfun       | Numeric   | Cognitive function T-score        | 0-100                     | Higher scores indicate better        |
+|                |           |                                   |                           | cognitive function                   |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_deprss       | Numeric   | Depression T-score                | 0-100                     | Higher scores indicate more          |
+|                |           |                                   |                           | depression                           |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_fatig        | Numeric   | Fatigue T-score                   | 0-100                     | Higher scores indicate more fatigue  |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_paininf      | Numeric   | Pain interference T-score         | 0-100                     | Higher scores indicate more pain     |
+|                |           |                                   |                           | interference                         |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_physfun      | Numeric   | Physical function T-score         | 0-100                     | Higher scores indicate better        |
+|                |           |                                   |                           | physical function                    |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_slpdist      | Numeric   | Sleep disturbance T-score         | 0-100                     | Higher scores indicate more sleep    |
+|                |           |                                   |                           | disturbance                          |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_managda      | Numeric   | Self-efficacy for managing daily  | 0-100                     | Higher scores indicate better        |
+|                |           | activities T-score                |                           | self-efficacy                        |
+|________________|___________|___________________________________|___________________________|______________________________________|
+| t_managsm      | Numeric   | Self-efficacy for managing        | 0-100                     | Higher scores indicate better        |
+|                |           | symptoms T-score                  |                           | self-efficacy                        |
+|________________|___________|___________________________________|___________________________|______________________________________|
+
+## Clinical Outcomes Data
+outcome.csv
+
+| Variable         | Type      | Description                       | Values                    | Notes                                |
+|------------------|-----------|-----------------------------------|---------------------------|--------------------------------------|
+| STUDY_PRTCPT_ID  | Character | Anonymized participant identifier | Format: "P###"            |                                      |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| cg_arm           | Character | Study arm assignment              | "1" = intervention,       |                                      |
+|                  |           |                                   | "0" = Control             |                                      |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| grfs_agvhd_3_4   | Character | Grade 3-4 acute GVHD event flag   | "1" = occur,              | Severe acute GVHD                    |
+|                  |           |                                   | "0" = not occur           |                                      |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| grfs_agvhd_date  | Numeric   | Days until acute GVHD occurrence  | 0-100                     | Days from transplant                 |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| grfs_cgvhd       | Numeric   | Chronic GVHD requiring systemic   | 0-100                     | Event flag                           |
+|                  |           | therapy                           |                           |                                      |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| grfs_cgvhd_date  | Numeric   | Days until chronic GVHD           | 0-100                     | Days from transplant                 |
+|                  |           | occurrence                        |                           |                                      |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| grfs_relapse     | Numeric   | Disease relapse event flag        | 0-100                     |                                      |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| grfs_relapse_date| Numeric   | Days until relapse                | 0-100                     | Days from transplant                 |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| grfs_death       | Numeric   | Death event flag                  | 0-100                     |                                      |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| grfs_death_date  | Numeric   | Days until death                  | 0-100                     | Days from transplant                 |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+| notes            | Character | Additional clinical notes         |                           | Free text                            |
+|__________________|___________|___________________________________|___________________________|______________________________________|
+
+## Hospital Readmission Data
+readmission.csv
+
+| Variable          | Type      | Description                       | Values                    | Notes                               |
+|-------------------|-----------|-----------------------------------|---------------------------|-------------------------------------|
+| STUDY_PRTCPT_ID   | Character | Anonymized participant identifier | Format: "P###"            |                                     |
+|___________________|___________|___________________________________|___________________________|_____________________________________|
+| number_admission  | Integer   | Sequential readmission number     | 0 = Never, 1 = First,     | Counts multiple readmissions        |
+|                   |           |                                   | 2 = Second, etc.          |                                     |
+|___________________|___________|___________________________________|___________________________|_____________________________________|
+| date_admit        | Integer   | Days until readmission            | days                      | Days from transplant                |
+|___________________|___________|___________________________________|___________________________|_____________________________________|
+| admission_reason  | Character | Cause of readmission              |                           | Free text                           |
+|___________________|___________|___________________________________|___________________________|_____________________________________|
+| date_discharge    | Integer   | Days until discharge              | days                      | Days from transplant                |
+|___________________|___________|___________________________________|___________________________|_____________________________________|
+| days_in_hospital  | Integer   | Length of hospital stay           | days                      | Duration of admission               |
+|___________________|___________|___________________________________|___________________________|_____________________________________|
+
+## Infection Data
+infections.csv
+
+| Variable           | Type      | Description                       | Values                    | Notes                              |
+|--------------------|-----------|-----------------------------------|---------------------------|------------------------------------|
+| STUDY_PRTCPT_ID    | Character | Anonymized participant identifier | Format: "P###"            |                                    |
+|____________________|___________|___________________________________|___________________________|____________________________________|
+| number_infection   | Integer   | Sequential infection number       | 0 = Never, 1 = First,     | Counts multiple infections         |
+|                    |           |                                   | 2 = Second, etc.          |                                    |
+|____________________|___________|___________________________________|___________________________|____________________________________|
+| date_culture_drawn | Integer   | Days until culture drawn          | days                      | Days from transplant               |
+|____________________|___________|___________________________________|___________________________|____________________________________|
+| culture_source     | Character | Anatomical source of culture      |                           | Site of infection                  |
+|____________________|___________|___________________________________|___________________________|____________________________________|
+| infection_type     | Character | Classification of infection       |                           | Bacterial/Viral/Fungal             |
+|____________________|___________|___________________________________|___________________________|____________________________________|
+| infection_name     | Character | Specific pathogen identified      |                           | Organism name                      |
+|____________________|___________|___________________________________|___________________________|____________________________________|
+
+## Data Processing Notes
+
+1. All timestamps are standardized to 24-hour format
+2. All dates are relative to transplant date (DaysFromTransplant)
+3. Personal identifiers are replaced with anonymous IDs
+4. Heart rate values are filtered to physiologically plausible range (30-200 bpm)
+5. Sleep duration is limited to plausible range (2-24 hours)
+6. Mood scores are limited to scale range (1-10)
+7. All time-based variables are measured in days from transplant date
+8. Day 0 = Transplant date
+9. Positive values indicate days after transplant
+10. Maximum follow-up period is 100 days for clinical outcomes
+
+## PROMIS T-Score Interpretation
+
+- Mean score = 50
+- Standard deviation = 10
+- Higher scores indicate more of the concept being measured
+- For symptom measures (anxiety, depression, fatigue, pain interference, sleep disturbance):
+  - Higher scores = More symptoms/worse health
+- For function measures (physical function, cognitive function, participation):
+  - Higher scores = Better function/health
+
+## Censoring
+
+The following information is removed during censoring:
+- Original participant IDs
+- Original device IDs
+- Exact dates
+- Location information
+- Any other potentially identifying information
+
+## Missing Data Codes
+
+- "OHSU patient": Missing hospital days data for OHSU patients
+- A blank cell indicates missing or not applicable data
+
+## Coverage and Time Periods
+
+- Full day coverage: 1440 minutes (24 hours)
+- Morning: 6:00-12:00 (360 minutes)
+- Afternoon: 12:00-18:00 (360 minutes)
+- Evening: 18:00-24:00 (360 minutes)
+- Night: 00:00-6:00 (360 minutes)
+
+## Time Coverage Calculation
+
+time_coverage = n_minutes / 1440 # where 1440 is minutes in a day
+
+## Data Quality Metrics
+
+- Valid coverage: time_coverage ≥ 0.8 (80% of day)
+- Valid heart rate range: 30-200 bpm
+- Valid step counts: ≥ 0 steps per minute
+- Total daily activities: should sum to ≤ 1440 minutes

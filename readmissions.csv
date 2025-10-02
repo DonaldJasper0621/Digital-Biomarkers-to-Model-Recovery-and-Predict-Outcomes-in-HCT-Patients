@@ -1,0 +1,290 @@
+"STUDY_PRTCPT_ID","number_admission","date_admit","admission_reason","date_discharge","days_in_hospital"
+"P001",1,315,"new diagnosis of high-grade myeloid neoplasm, consistent with relapsed AML",337,22
+"P002",1,50,"Fever, CMV viremia",63,13
+"P002",2,77,"CMV viremia",107,30
+"P002",3,137,"nausea, vomitting, diarrhea. C diff positive",158,21
+"P002",4,172,"septic shock; HRE and adenovirus positive. Passed away.",189,17
+"P003",1,21,"Positive wound culture/Central line infection",29,8
+"P004",1,40,"Fever",92,52
+"P004",2,110,"Failure to thrive, poor oral intake, NV, fatigue, weakness, AKI, thrombocytopenia",133,23
+"P004",3,204,"nausea, vomiting, diarrhea concerning for GVHD",226,22
+"P005",2,118,"Nausea & Vomiting",120,2
+"P005",3,278,"RSV",280,2
+"P005",1,27,"GVHD (graft versus host disease)",53,26
+"P006",1,195,"Hyperbilirubinemia",204,9
+"P007",1,41,"Worsening hyperbilirubinemia, and poor appetite concerning for GVHD, cough",77,36
+"P007",2,240,"Hand trauma, surgery",246,6
+"P007",3,302,"follow up reconstruction of left dorsal hand injury initially sustained in an ATV accident in July for left groin flap to dorsal hand with tendon reconstruction.",304,2
+"P007",4,313,"Surgical site infection",317,4
+"P008",2,193,"diarrhea concerning for GVHD. Flex sig negative for GVHD.",198,5
+"P008",1,57,"hyperglycemia",62,5
+"P009",0,,,,
+"P010",1,20,"nausea, vomiting, diarrhea. Rapid positive COVID-19 test in ED (but the next 2-3 days he tested negative)",23,3
+"P010",2,38,"BK Viruria/pain control",41,3
+"P010",4,180,"RSV infection",182,2
+"P010",3,52,"Nausea, poor appetite, weight loss; possible GVHD",62,10
+"P011",1,21,"ED visit; bloody stool",21,0
+"P011",2,308,"diarrhea concerning for GVHD +/- EPEC infection. Also has urinary symptoms concerning for infection.",337,29
+"P012",0,,,,
+"P013",3,330,"acute LFT/AlkPhos/LDH elevation",339,9
+"P013",1,21,"pain, poor p.o. intake, and low-grade fever",37,16
+"P013",2,48,"Pain, generalized weakness, hypokalemia",57,10
+"P014",2,116,"Worsening diarrhea, nausea, inability to tolerate PO due to adenovirus and potential superimposed GVHD",145,29
+"P014",3,145,"Inpatient rehab",168,23
+"P014",4,169,"pancytopenia and GVHD, hypoxic respiratory failure due to flash pulmonary edema, and renal failure",261,92
+"P014",1,89,"Inpatient rehab",116,27
+"P015",1,75,"worsening abdominal pain and diarrhea. GI GVHD",98,23
+"P015",2,323,"diarrhea for a GVHD work up",348,25
+"P016",2,350,"Inpatient rehab",376,27
+"P016",1,328,"Suspect respiratory failure due to IPS and stenotrophomonas VAP",350,22
+"P017",1,55,"Syncope related to bacteremia",64,9
+"P018",1,53,"Fever and chills",56,3
+"P018",2,84,"Nausea and vomiting",95,11
+"P019",1,56,"Profound hyponatremia",69,13
+"P019",2,112,"Worsening shortness of breath",135,23
+"P020",0,,,,
+"P021",2,156,"tooth pain and neutropenic fevers",157,1
+"P021",1,29,"intractable nausea, vomiting as well as diarrhea with significant associated pruritis. Concern for GI GVHD",42,13
+"P022",1,27,"UTI and fever",31,4
+"P022",2,36,"possible GVHD vs VOD (ascites, abdominal distension, UTI sxs",44,8
+"P022",3,48,"increase fatigue and worsening abdominal ascites, likely GVHD. Failure to thrive; discharged to hospice",94,46
+"P023",1,71,"pleuritic chest pain and pneumonia",76,5
+"P024",1,75,"hallucinations, diarrhea, Ecoli bacteremia.",85,10
+"P024",2,103,"Acute cystitis without hematuria",106,3
+"P024",3,123,"Nausea & vomiting",138,15
+"P024",4,162,"Large L gluteal hematoma anfter fall at home with recent steroid taper and new acute LUE extensive DVT treated with lovenox",169,7
+"P024",5,193,"left gluteal hematoma s/p operative management",209,16
+"P024",6,330,"altered mental status",337,7
+"P025",1,93,"Concern for GVHD of the intestine w/ concerning lung imaging findings in the setting of",111,18
+"P026",2,282,"Dyspnea",285,3
+"P026",3,315,"Surgery Vascular Adult service for PAD (peripheral artery disease)",317,2
+"P026",4,359,"hypoxia (2-4L NC), cough, dyspnea worsening after recent Prednisone tape",365,6
+"P026",1,36,"new hyperbilirubinemia, concern for GVHD vs. VOD",39,3
+"P027",1,21,"progressive worsening of low back pain with extension to bilateral thighs",47,26
+"P028",0,,,,
+"P029",1,53,"Sepsis",60,7
+"P030",1,49,"diarrhea",54,5
+"P031",1,45,"Pulmonary embolism",52,7
+"P031",2,66,"Pulmonary embolism, hypoxia, diarrhea, hematuria",81,15
+"P032",0,,,,
+"P033",1,245,"nausea and vomitting",246,1
+"P034",0,,,,
+"P035",2,316,"inpatient rehab",342,25
+"P035",3,343,"urinary symptoms and sepsis with concern for bacterial UTI vs BK cystitis.",372,29
+"P035",1,273,"n/v/d, worsening skin rash and AKI.",316,43
+"P036",1,281,"cardiac surgery",288,7
+"P037",0,,,,
+"P038",1,34,"urgent evaluation of new onset skin rash and diarrhea concerning for acute GVHD",44,10
+"P038",3,104,"fever, PNA, MS changes and AKI",111,7
+"P038",4,119,"fever, flare of skin GVHD and worsening pneumonia",133,14
+"P038",5,177,"acute kidney injury",188,11
+"P038",2,77,"Readmitted for hypotension and fever prior to admission concerning for sepsis",82,5
+"P038",6,195,"hip pain",208,13
+"P038",7,286,"altered mental status. Passed away.",290,4
+"P039",0,,,,
+"P042",0,,,,
+"P043",2,287,"Mouth pain, nausea, failure to thrive",291,4
+"P043",3,324,"Dysuria, frequency, hematuria x 7 days",332,8
+"P043",1,282,"leg pain",284,2
+"P044",1,60,"Fatigue, anorexia, nausea, headaches; evaluate for GVHD (negative)",70,11
+"P044",2,164,"dehydration",165,1
+"P045",2,212,"Progressive CTCL, acute pain, finger abscess and failure to thrive. Passed away",227,15
+"P045",1,153,"hand abscess",155,2
+"P046",1,38,"Hyponatremia, hyperkalemia, and AKI",41,3
+"P047",1,182,"circulating disease indicative of first relapse for GCLAC induction",222,40
+"P047",2,236,"neutropenic fever",241,5
+"P050",1,21,"Back pain",33,12
+"P050",2,53,"Possible seizure activity",60,7
+"P050",3,252,"DVT, lower extremity, proximal, acute, left",253,1
+"P051",2,357,"Acute hypoxia and worsening dyspnea s/p second allo haplo HCT w/ FluMelTBI conditioning with post tx Cy",372,16
+"P051",1,42,"inpatient rehab",49,7
+"P052",1,124,"FLAG induction",142,18
+"P052",2,166,"FLAG consolidation #1",170,4
+"P052",3,176,"Dysphagia",182,6
+"P052",4,197,"5-day history of insomnia, fatigue, URI symptoms and diffuse non-pruritic, maculopapular rash involving his entire body, with elevated liver function tests upon admission.",238,41
+"P053",1,30,"Fever",33,3
+"P053",2,-643,"nausea/diarrhea/abdominal pain, concerning for infection versus GVHD",-639,4
+"P053",3,102,"norovirus gastroenteritis and acute upper GI GvHD",115,13
+"P053",9,230,"cranioplasty",237,7
+"P053",10,238,"inpatient rehab",257,19
+"P053",5,143,"Subdural hematoma",164,21
+"P053",6,164,"inpatient rehab",193,29
+"P053",7,195,"Diarrhea",207,12
+"P053",4,140,"Syncope and collapse",141,1
+"P053",8,211,"Nausea and vomiting",217,6
+"P054",1,23,"Pseudogout of right knee",44,21
+"P054",2,50,"concern for GI GVHD vs infection with noted nausea, anorexia, early satiety, and diarrhea for at least 3 days",56,6
+"P054",3,130,"rash and anorexia",160,30
+"P054",5,170,"inpatient rehab",189,19
+"P054",6,254,"Fatigue/weakness, poor PO intake, dysphagia, rash, AKI, NSTEMI, low UO",281,27
+"P054",7,302,"ignificant worsening erythematous body rash with rapid steroid taper",311,9
+"P054",4,164,"Fatigue, weakness, fluid overload",170,6
+"P054",8,319,"severe hypotension requiring pressor support and CCMU admission, found to have MRSA bacteremia. Discharged to hospice",330,11
+"P055",1,22,"fevers, low SBPs in the 90s and chills",26,4
+"P055",2,61,"N/V/diarrhea and fevers",64,3
+"P055",3,79,"N/V/anorexia and AKI.",92,13
+"P055",4,319,"parainfluenza pneumonia and CMV viremia. Passed away",340,21
+"P056",2,145,"elevated LFT's concerning for liver GVHD",147,2
+"P056",1,75,"R neck swelling and pain, found to have central-line associated DVT",79,4
+"P057",1,17,"seizures related to PRES",22,5
+"P057",2,68,"acute lip swelling and worsening skin GVHD",77,9
+"P057",3,92,"urgent line exchange and HHV6 management",94,2
+"P058",1,27,"nausea, vomiting, and weight loss with concern for acute upper GI",30,3
+"P058",2,141,"chronic overlap GVHD with GI and liver involvement",147,6
+"P058",3,181,"pancytopenia, AKI, hyperglycemia and increased BLE edema",191,10
+"P058",4,198,"cellulitis",207,9
+"P058",5,237,"Nausea vomiting and diarrhea",240,3
+"P058",6,334,"hypoxia",349,15
+"P059",1,29,"acute GVHD of the lower GI tract",41,12
+"P059",3,281,"Abdominal cramping, diarrhea, recent nausea, vomiting. Increased blasts in blood and leukocytosis. Concern for GI GVHD flare and CML relapse.",288,7
+"P059",4,362,"worsening epigastric pain, constipation, and c/f bowel obstruction v. GVHD flare",365,3
+"P059",2,174,"abominal pain, nausea, and vomiting concerning for GVHD flare in setting of recent steroid taper",179,5
+"P060",1,16,"Neck swelling, fever, IJ DVT",22,6
+"P060",2,88,"Chest pain",88,0
+"P060",4,326,"generalized anasarca, worsening over the last week.",328,2
+"P060",3,102,"Concern for Sepsis/Bacteremia",106,4
+"P061",0,,,,
+"P062",0,,,,
+"P064",0,,,,
+"P065",1,38,"Abdominal pain, N/V, early satiety; evaluation and management of GI GVHD",52,14
+"P065",2,122,"fatigue, chills, fevers",125,3
+"P065",3,131,"fever (to 103F), headache and neck pain/stiffness.",136,5
+"P066",1,31,"Headache and N/V",37,6
+"P066",2,105,"fever and concern for bacteremia",136,31
+"P067",1,99,"Double vision while driving",99,0
+"P068",1,43,"Sepsis; GI GVHD",64,21
+"P068",2,135,"GI bleeding and ano-rectal HSV",145,10
+"P068",3,197,"chest pain, increased fatigue, N/V/D, and FTT",209,12
+"P068",4,223,"diarrhea",232,9
+"P069",1,31,"Treatment of high-titer HHV-6 viremia",40,9
+"P069",2,62,"Evaluation for GI GVHD",73,11
+"P069",3,102,"RSV and COPD exacerbation",122,20
+"P069",4,280,"pneumonia",283,3
+"P070",0,,,,
+"P071",1,146,"surveillance blood culture +MRSE and AKI to receive IV Vanco and IVF support",153,7
+"P072",0,,,,
+"P073",1,96,"Pneumonia due to infectious organism; respiratory failure associated with AKI and fluid overload, presumed BOS/chronic lung GVHD, transplant associated thrombotic microangiopathy, pericardial effusion s/p drainage, and CMV viremia",222,126
+"P074",1,70,"nausea, diarrhea, ascites",112,42
+"P074",2,221,"Pneumomediastinum",223,2
+"P074",3,231,"AKI",235,4
+"P075",1,144,"Nausea & vomiting.",149,5
+"P075",2,319,"acute BL PE",322,3
+"P076",1,19,"nausea and diarrhea concerning for GVHD",27,8
+"P076",2,57,"symptomatic BK Viruria requiring treatment with IV Cidofovir",59,2
+"P076",3,166,"vision changes, hypoxemia w/ pulmonary infiltrates",186,20
+"P076",4,209,"complaints of weakness cough shortness of breath.complaints of weakness cough shortness of breath.",217,8
+"P077",0,,,,
+"P078",1,110,"gout flare. L wrist erythema and edem",111,1
+"P078",2,192,"GVHD",205,13
+"P079",1,211,"GVHD",216,5
+"P080",0,,,,
+"P081",0,,,,
+"P082",1,218,"nausea, abdominal cramping, bright red blood per rectum.",225,7
+"P082",2,333,"dyspnea and anemia. RPAN positive for COVID,",336,3
+"P083",1,35,"concern for GVHD vs. PRES vs. Infection",43,8
+"P084",1,133,"bacteremia and decreased PO intake.",137,4
+"P084",2,225,"Tumor lysis syndrome",228,3
+"P084",3,235,"abscess",238,3
+"P084",4,256,"febrile neutropenia and concern for cellulitis at site of previous port site",265,9
+"P084",5,292,"Septic shock  with an associated episode of febrile neutropenia.",326,34
+"P084",6,330,"diarrhea and abdominal masses",332,2
+"P085",1,85,"G-primed DLI",89,4
+"P085",2,225,"continued poor graft function (transfusion dependent anemia/ thrombocytopenia), recent onset chronic GVHD of eyes/mouth/vagina, admitted with hematemesis and melena 9/22/23, suspicious for gut GVHD",247,22
+"P086",0,,,,
+"P087",1,333,"rash, abdominal pain, oral pain concerning for skin, oral, and GI GVHD.",353,20
+"P088",1,281,"Relapsed ALL, R-HyperCVAD B + IT chemo",303,22
+"P088",2,315,"Lt sided wkness over past few week. CTH demonstrated rt extra-atrial subdural hematoma unable to exclude empyema. eventually transferred to BMT for LD chemotherapy followed by CAR-T (Tecartus).",429,115
+"P089",1,51,"CT chest findiings concerning for atypical infection",71,20
+"P089",2,82,"fever, hypotension, and fatigue concerning for sepsis",92,10
+"P089",3,117,"Symptomatic anemia, AKI, elevated LFTs, and hypokalemia",127,10
+"P090",1,227,"generalized weakness, recurrent falls, left hip pain, new onset ascites and worsening thrombocytopenia.",245,18
+"P091",1,47,"Neck pain",55,8
+"P091",2,97,"~1 week of fatigue, reduced PO intake, poor appetite, malaise. Possible failure to thrive, dehydration",100,3
+"P092",1,38,"Fever in adult",48,10
+"P092",2,52,"Chest pain",56,4
+"P092",3,117,"Sepsis",121,4
+"P092",4,128,"chest pain, acute pulmonary embolism and pneumonia",147,19
+"P092",5,147,"inpatient rehab",160,13
+"P092",6,160,"Acute mentation changes (delirium, hallucinations, paranoia, delusions)",182,22
+"P093",1,98,"Cough and Shortness of Breath",111,13
+"P093",2,125,"hypoxia and recurrent bilateral pleural effusions",131,6
+"P094",0,,,,
+"P095",1,51,"Acute Kidney Injury",75,24
+"P095",2,90,"Thrombotic microangiopathies (TMA); GVHD; passed away",137,47
+"P096",0,,,,
+"P097",1,27,"Hypotension",30,3
+"P098",0,,,,
+"P099",1,21,"Fever",22,1
+"P099",2,50,"Fever; impacted wisdom tooth (had surgery to remove it)",58,8
+"P099",3,96,"febrile neutropenia",100,4
+"P100",1,43,"increasing abdominal distension, new BLE edema, weight gain, persistent rash, and GI symptoms concerning for both VOD and worsening GvHD",65,22
+"P100",2,107,"Worsening acute GVHD",122,15
+"P100",3,174,"Hyperkalemia",176,2
+"P100",4,211,"septic shock. Passed away",224,13
+"P101",0,,,,
+"P102",0,,,,
+"P103",0,,,,
+"P104",0,,,,
+"P105",1,37,"Chest pain, sepsis",43,6
+"P106",0,,,,
+"P107",1,41,"Nausea and vomiting",43,2
+"P108",0,,,,
+"P109",0,,,,
+"P110",0,,,,
+"P111",0,,,,
+"P113",0,,,,
+"P114",0,,,,
+"P115",1,29,"high dose carboplatin + VP16 followed by Auto PBSCT #2 of 2.",48,19
+"P115",2,180,"ost-chemotherapy bilateral retroperitoneal lymph node dissection with Retroperitoneal mass resection (>20cm conglomerate), bilateral ureterolysis, Lysis of adhesions on 1/4/22 without intraoperative complication and was taken to the general care floor in stable condition.",183,3
+"P116",0,,,,
+"P117",0,,,,
+"P118",0,,,,
+"P119",0,,,,
+"P120",0,,,,
+"P121",1,329,"initiation of VDT-PACE on 7/27/22 as well as treatment of tumor lysis syndrome with acute kidney injury. Passed away 9/25/22",389,60
+"P122",0,,,,
+"P123",0,,,,
+"P124",0,,,,
+"P125",0,,,,
+"P126",0,,,,
+"P127",0,,,,
+"P128",0,,,,
+"P129",0,,,,
+"P130",0,,,,
+"P131",1,99,"hemolytic anemia and thrombocytopenia concerning for drug-induced thrombotic microangiopathy (TMA) vs. thrombotic thrombocytopenia (TTP)",105,6
+"P133",0,,,,
+"P136",0,,,,
+"P137",0,,,,
+"P138",0,,,,
+"P141",0,,,,
+"P143",1,313,"CAR-T Therapy",327,14
+"P144",1,130,"Second autologous BMT",145,15
+"P145",1,41,"pain control and treatment of progressive disease",51,10
+"P145",2,64,"lymphodepleting chemotherapy and CD 19/20 CAR T-cell therapy on study",85,21
+"P145",3,171,"ecreased urine output and left flank pain concerning for obstruction",175,4
+"P145",4,191,"initially presented with AKI on 9/15 in setting of progressive disease and large pelvic mass causing both ureteral and bladder outlet obstruction. Passed away.",217,26
+"P146",0,,,,
+"P147",0,,,,
+"P148",1,50,"Persistent delirium, new eosinophilia",52,2
+"P148",2,52,"Persistent delirium, depression, anxiety",64,12
+"P149",0,,,,
+"P150",0,,,,
+"P151",0,,,,
+"P152",0,,,,
+"P153",0,,,,
+"P154",0,,,,
+"P155",0,,,,
+"P156",0,,,,
+"P157",1,239,"epigastric and RUQ pain with CT findings c/f splenic infarction.",243,4
+"P158",0,,,,
+"P159",0,,,,
+"P160",1,347,"Chemotherapy-induced nausea",348,1
+"P161",0,,,,
+"P162",0,,,,
+"P163",0,,,,
+"P164",0,,,,
+"P165",0,,,,
+"P166",0,,,,
+"P167",0,,,,
+"P168",0,,,,
+"P169",0,,,,

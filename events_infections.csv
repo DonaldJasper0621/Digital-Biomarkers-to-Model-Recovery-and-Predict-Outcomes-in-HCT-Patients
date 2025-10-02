@@ -1,0 +1,427 @@
+STUDY_PRTCPT_ID,number_infection,DaysFromTransplant,culture_source,infection_type,infection_name
+P001,1,9.0,Stool,Bacterial,C. diff
+P002,4,137.0,Stool,Bacterial,C. diff
+P002,6,172.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P002,2,12.0,Blood,Bacterial,Rothia mucilaginosa (central line)
+P002,3,26.0,Stool,Bacterial,C. diff
+P002,5,172.0,Nasal/Nasopharyngeal,Viral,Adenovirus
+P002,1,11.0,Blood,Viral,CMV
+P003,1,18.0,Blood,Viral,CMV
+P003,2,21.0,Wound,Bacterial,Rare gram positive cocci (around Hickman site)
+P003,3,21.0,Blood,Bacterial,S. epidermis (central line)
+P004,3,59.0,Blood,,Toxoplasma
+P004,1,20.0,Blood,Viral,HHV6
+P004,2,20.0,Blood,Viral,Epstein-Barr Virus
+P004,7,191.0,Urine,Bacterial,Coagulase negative Staphylococcus (not saprophyticus)
+P004,4,33.0,Blood,Viral,CMV
+P004,5,78.0,Urine,Bacterial,Klebsiella variicola
+P004,6,169.0,Other,Fungal,Candida albicans
+P005,1,9.0,Stool,Bacterial,Clostridium difficile
+P005,2,40.0,Blood,Viral,Epstein-Barr Virus
+P005,3,274.0,Nasal/Nasopharyngeal,Viral,Respiratory Syncytial Virus
+P006,1,33.0,Blood,Viral,HHV6
+P006,2,85.0,Blood,Viral,CMV
+P007,1,34.0,Plasma,Viral,CMV
+P008,2,119.0,Plasma,Viral,CMV
+P008,1,16.0,Plasma,Viral,Parvovirus
+P009,0,,,,
+P010,3,94.0,Plasma,Viral,EBV
+P010,1,21.0,Plasma,Viral,CMV
+P010,2,34.0,Plasma,Viral,BKV
+P011,3,335.0,Plasma,Viral,EBV
+P011,2,308.0,Stool,Bacterial,Enteropathogenic E.coli (EPEC)
+P011,1,21.0,Plasma,Viral,CMV
+P012,1,7.0,Blood,Bacterial,Escherichia coli (central line)
+P012,2,11.0,Sputum,Bacterial,Escherichia coli (Tracheal Aspirate )
+P013,1,75.0,Blood,Viral,CMV
+P013,2,330.0,Plasma,Viral,EBV
+P014,9,169.0,Blood,Bacterial,Staphylococcus epidermidis (peripheral)
+P014,10,170.0,Sputum,Fungal,Penicillium species
+P014,11,218.0,Blood,Bacterial,Enterobacter cloacae complex (central line)
+P014,12,238.0,Plasma,Viral,BKV
+P014,4,33.0,Blood,Viral,EBV
+P014,1,6.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P014,2,15.0,Blood,Viral,HHV6
+P014,3,32.0,Plasma,Viral,BKV
+P014,8,117.0,Other,Bacterial,VRE (Vancomycin Resistant Enterococcus)
+P014,5,33.0,Sputum,Fungal,Pneumocystis carinii
+P014,6,39.0,Bronchoscopic,Fungal,Aspergillus
+P014,7,111.0,Stool,Viral,Adenovirus
+P015,1,338.0,Plasma,Viral,EBV
+P015,2,338.0,Stool,Viral,Norovirus
+P015,3,343.0,Other,Bacterial,VRE
+P016,2,21.0,Plasma,Viral,CMV
+P016,1,-3.0,Stool,Bacterial,C. diff
+P016,3,75.0,Plasma,Viral,EBV
+P016,4,328.0,Sputum,Bacterial,Stenotrophomonas maltophilia complex
+P016,5,329.0,Stool,Bacterial,C. diff
+P017,2,5.0,Blood,Bacterial,E. coli
+P017,6,55.0,Blood,Bacterial,"Pantoea species (red lumen, blue lumen, central line))"
+P017,3,22.0,Plasma,Viral,CMV
+P017,4,41.0,Plasma,Viral,EBV
+P017,5,55.0,Blood,Bacterial,"Gram negative rods, Mixta species (red lumen, blue lumen, central line)"
+P017,1,4.0,Stool,Bacterial,C. diff
+P017,7,56.0,Stool,Bacterial,C. diff
+P018,2,26.0,Urine,Bacterial,Enterococcus faecalis
+P018,3,85.0,Stool,Bacterial,C. diff
+P018,1,9.0,Blood,Bacterial,Gemella haemolysans (central line)
+P019,4,331.0,Stool,Viral,Sapovirus
+P019,1,5.0,Blood,Bacterial,Enterococcus gallinarum (peripheral)
+P019,2,331.0,Nasal/Nasopharyngeal,Viral,Respiratory Syncytial Virus
+P019,3,331.0,Stool,Viral,Norovirus
+P020,1,210.0,Sputum,Bacterial,Mycobacterium chelonae species group
+P021,1,18.0,Plasma,Viral,CMV
+P021,2,320.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P022,1,20.0,Plasma,Viral,CMV
+P022,2,23.0,Urine,Bacterial,Pseudomonas aeruginosa
+P023,1,13.0,Plasma,Viral,CMV
+P023,5,177.0,Nasal/Nasopharyngeal,Viral,Respiratory Syncytial Virus
+P023,2,72.0,Plasma,Viral,EBV
+P023,3,72.0,Blood,Bacterial,Klebsiella oxytoca (central line)
+P023,4,149.0,Stool,Bacterial,Enteropathogenic E.coli (EPEC)
+P024,5,163.0,Urine,Bacterial,E Coli
+P024,6,167.0,Plasma,Viral,EBV
+P024,7,198.0,Stool,Bacterial,C. diff
+P024,8,309.0,Nasal/Nasopharyngeal,Bacterial,Human Metapneumovirus
+P024,4,132.0,Other,Bacterial,VRE (Vancomycin Resistant Enterococcus)
+P024,1,-1.0,Stool,Bacterial,C. diff
+P024,2,75.0,Blood,Bacterial,E. coli (central line)
+P024,3,104.0,Urine,Bacterial,Hafnia alvei
+P025,1,1.0,Other,Bacterial,VRE
+P025,5,105.0,Other,Bacterial,VRE
+P025,2,8.0,Stool,Bacterial,C. diff
+P025,3,94.0,Stool,Bacterial,C. diff
+P025,4,98.0,Other,Bacterial,VRE
+P026,4,360.0,Sputum,Bacterial,Pseudomonas aeruginosa
+P026,1,282.0,Sputum,Bacterial,Pseudomonas aeruginosa
+P026,2,282.0,Sputum,Bacterial,yeast
+P026,3,282.0,Plasma,Viral,EBV
+P027,0,,,,
+P028,1,210.0,Nasal/Nasopharyngeal,Viral,Coronavirus OC43
+P029,1,54.0,Blood,Bacterial,Acinetobacter species (central line)
+P030,1,-6.0,Other,Bacterial,VRE (perirectal sample)
+P030,2,-5.0,Stool,Bacterial,C. diff
+P030,4,37.0,Stool,Bacterial,C. diff (GI panel)
+P030,5,106.0,Stool,Bacterial,E. coli (GI panel)
+P030,6,181.0,Plasma,Viral,EBV
+P030,3,14.0,Other,Bacterial,VRE
+P031,2,45.0,Blood,Bacterial,Coagulase negative Staphylococcus (peripheral)
+P031,1,15.0,Plasma,Viral,CMV
+P032,1,1.0,Stool,Bacterial,C Diff
+P032,2,83.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P033,3,133.0,Plasma,Viral,EBV
+P033,2,54.0,Plasma,Viral,CMV
+P033,7,344.0,Nasal/Nasopharyngeal,Viral,SARS-CoV-2 (COVID-19)
+P033,4,245.0,Stool,Bacterial,C Diff
+P033,5,246.0,Stool,Viral,Norovirus
+P033,6,282.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 3
+P033,1,11.0,Blood,Bacterial,Rothia mucilaginosa (central line)
+P034,1,11.0,Plasma,Viral,CMV
+P034,2,70.0,Blood,Viral,EBV
+P034,3,173.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P035,1,280.0,Stool,Viral,Norovirus
+P035,2,334.0,Plasma,Viral,EBV
+P036,1,17.0,Sputum,Fungal,Candida glabrata
+P036,2,25.0,Bronchoscopic,Bacterial,"Mixed oral flora present at >10,000 cfu/mL.  No S. aureus/MRSA [Methicillin-resistant Staphylococcus aureus] or  Pseudomonas aeruginosa."
+P037,2,-5.0,Plasma,Viral,EBV
+P037,1,-5.0,Stool,Bacterial,C. diff
+P038,1,-6.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P038,2,15.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 2
+P038,3,34.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P038,4,77.0,Blood,Bacterial,Staphylococcus aureus (peripheral)
+P038,8,121.0,Sputum,Fungal,Candida albicans
+P038,5,77.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P038,6,119.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P038,7,120.0,Blood,Viral,CMV
+P038,9,178.0,Nasal/Nasopharyngeal,Viral,Coronavirus 229e
+P039,1,14.0,Blood,Viral,CMV
+P042,2,14.0,Blood,Viral,CMV
+P042,1,-5.0,Stool,Bacterial,C. diff
+P043,1,-5.0,Stool,Bacterial,C. diff
+P043,2,22.0,Blood,Viral,CMV
+P043,3,222.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P043,4,324.0,Plasma,Viral,BKV
+P043,5,327.0,Other,Viral,HSV
+P043,6,365.0,Plasma,Viral,EBV
+P044,2,269.0,Stool,Bacterial,C. diff
+P044,1,164.0,Stool,Bacterial,C. diff
+P045,7,39.0,Wound,Bacterial,"Enterobacter cloacae complex, Klebsiella oxytoca, Enterococcus faecium,"
+P045,6,20.0,Bronchoscopic,Bacterial,Staphylococcus aureus
+P045,11,214.0,Stool,Bacterial,C diff
+P045,8,135.0,Plasma,Viral,EBV
+P045,9,153.0,Wound,Bacterial,Staphylococcus aureus
+P045,10,153.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P045,1,-7.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P045,2,-6.0,Stool,Bacterial,C diff
+P045,3,8.0,Other,Bacterial,VRE
+P045,4,12.0,Blood,Bacterial,Staphylococcus aureus (central line)
+P045,5,17.0,Blood,Viral,CMV
+P045,12,224.0,Blood,Bacterial,Staphylococcus aureus (central line)
+P045,13,225.0,Blood,Bacterial,Staphylococcus aureus (peripheral)
+P046,2,10.0,Other,Viral,Norovirus
+P046,1,10.0,Blood,Bacterial,S. epidermis (peripheral)
+P047,1,193.0,Urine,Bacterial,E coli
+P047,2,209.0,Wound,Bacterial,Enterococcus faecalis
+P047,3,236.0,Other,Bacterial,VRE
+P050,2,6.0,Other,Viral,Norovirus
+P050,6,54.0,Urine,Bacterial,Enterococcus faecium
+P050,3,15.0,Other,Bacterial,VRE
+P050,4,25.0,Blood,Viral,CMV
+P050,5,25.0,Blood,Viral,EBV
+P050,1,6.0,Other,Bacterial,C. diff
+P051,4,357.0,Sputum,Bacterial,Staphylococcus aureus
+P051,1,0.0,Stool,Viral,Norovirus
+P051,2,9.0,Blood,Bacterial,E coli (central line)
+P051,3,9.0,Blood,Bacterial,Enterococcus faecium (peripheral)
+P052,5,201.0,Other,Bacterial,C. diff
+P052,1,6.0,Wound,Bacterial,Coagulase negative Staphylococcus
+P052,2,7.0,Other,Bacterial,VRE
+P052,3,50.0,Blood,Bacterial,CMV
+P052,4,198.0,Other,Bacterial,VRE
+P053,1,24.0,Blood,Viral,CMV
+P053,2,31.0,Plasma,Viral,BK Virus
+P053,3,87.0,Stool,Viral,Norovirus
+P053,4,195.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P053,5,199.0,Other,Bacterial,Staphylococcus aureus
+P054,8,319.0,Blood,Bacterial,MRSA (Peripheral)
+P054,3,139.0,Blood,Bacterial,Enterobacter cloacae complex (central line
+P054,1,87.0,Plasma,Viral,EBV
+P054,2,101.0,Blood,Viral,CMV
+P054,7,302.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P054,4,169.0,Blood,Bacterial,Staphylococcus epidermidis (central line)
+P054,5,239.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P054,6,255.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P055,1,18.0,Blood,Viral,CMV
+P055,2,67.0,Plasma,Viral,EBV
+P055,3,80.0,Blood,Bacterial,Pseudomonas aeruginosa (central line)
+P055,4,214.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 3
+P055,5,319.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 4
+P056,1,99.0,Blood,Viral,CMV
+P057,3,69.0,Wound,Bacterial,Staphylococcus aureus
+P057,1,68.0,Blood,Bacterial,Staphylococcus aureus (peripheral)
+P057,2,68.0,Nasal/Nasopharyngeal,Bacterial,MRSA
+P057,4,82.0,Plasma,Viral,EBV
+P058,4,141.0,Other,Bacterial,VRE
+P058,6,334.0,Blood,Bacterial,Staphylococcus aureus (peripheral)
+P058,7,334.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P058,8,335.0,Sputum,Bacterial,Staphylococcus aureus
+P058,5,237.0,Plasma,Viral,EBV
+P058,1,0.0,Other,Bacterial,VRE
+P058,2,2.0,Stool,Bacterial,C. diff
+P058,3,120.0,Stool,Bacterial,C. diff
+P059,1,4.0,Stool,Viral,Rotavirus A
+P059,2,34.0,Other,Bacterial,VRE
+P059,3,362.0,Plasma,Viral,EBV
+P060,1,10.0,Blood,Bacterial,"S. epidermis (central line, peripheral)"
+P060,5,102.0,Blood,Bacterial,Serratia marcescens
+P060,2,15.0,Stool,Bacterial,C diff
+P060,3,18.0,Blood,Viral,CMV
+P060,4,102.0,Blood,Bacterial,Aeromonas species
+P061,1,24.0,Plasma,Viral,EBV
+P061,2,132.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P062,1,7.0,Blood,Bacterial,"S. epidermis (central line, peripheral)"
+P062,2,177.0,Nasal/Nasopharyngeal,Viral,Respiratory Syncytial Virus
+P062,3,347.0,Stool,Viral,Rotavirus A
+P064,1,-5.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P064,2,26.0,Blood,Viral,CMV
+P065,1,-8.0,Other,Bacterial,VRE
+P065,2,10.0,Blood,Viral,CMV
+P065,3,84.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P065,4,131.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 1
+P065,5,161.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 1
+P066,1,35.0,Plasma,Viral,EBV
+P066,2,131.0,Blood,Bacterial,"Pseudomonas aeruginosa, Achromobacter species (Peripheral)"
+P066,3,132.0,Blood,Bacterial,"Acinetobacter species, Achromobacter species (Central line)"
+P067,1,16.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P067,2,16.0,Blood,Viral,CMV
+P067,3,160.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P067,4,160.0,Sputum,Viral,Haemophilus influenza
+P068,1,43.0,Blood,Bacterial,Acinetobacter species
+P068,2,57.0,Blood,Viral,CMV
+P068,3,136.0,Stool,Bacterial,C Diff
+P069,1,9.0,Blood,Bacterial,Corynebacterium jeikeium (Group JK)
+P069,2,12.0,Other,Bacterial,VRE
+P069,3,77.0,Plasma,Viral,EBV
+P069,4,96.0,Nasal/Nasopharyngeal,Viral,Respiratory Syncytial Virus
+P069,5,103.0,Stool,Bacterial,VRE
+P069,6,109.0,Nasal/Nasopharyngeal,Viral,RSV
+P069,7,154.0,Blood,Bacterial,Staphylococcus epidermidis (central line)
+P070,1,71.0,Stool,Bacterial,C. diff
+P071,1,25.0,Stool,Bacterial,C. diff
+P071,2,40.0,Blood,Viral,CMV
+P071,3,47.0,Plasma,Viral,EBV
+P071,4,47.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P071,5,145.0,Blood,Bacterial,MRSA
+P071,6,147.0,Stool,Bacterial,C Diff
+P072,0,,,,
+P073,1,75.0,Blood,Viral,CMV
+P073,2,116.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P073,3,144.0,Stool,Bacterial,C Diff
+P074,1,82.0,Other,Bacterial,Kocuria Species
+P074,2,225.0,Blood,Bacterial,Staphylococcus caprae (peripheral)
+P074,3,225.0,Blood,Bacterial,Staphylococcus caprae (central line)
+P075,1,22.0,Blood,Viral,CMV
+P076,1,-6.0,Stool,Bacterial,C. difficile
+P076,2,20.0,Blood,Viral,CMV
+P076,3,62.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P077,1,19.0,Blood,Viral,CMV
+P077,2,208.0,Plasma,Viral,EBV
+P078,0,,,,
+P079,1,43.0,Plasma,Viral,Epstein-Barr Virus DNA
+P080,0,,,,
+P081,1,-8.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P081,2,126.0,Plasma,Viral,EBV
+P081,3,196.0,Other,Viral,Varicella Zoster
+P082,1,24.0,Blood,Viral,CMV
+P082,2,333.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P083,1,28.0,Blood,Viral,CMV
+P084,1,6.0,Stool,Bacterial,C diff
+P084,2,10.0,Blood,Bacterial,Staphylococcus epidermidis (central line)
+P084,3,12.0,Blood,Viral,CMV
+P084,4,31.0,Stool,Bacterial,C diff
+P084,5,134.0,Blood,Bacterial,Staphylococcus epidermidis (central line)
+P084,6,226.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P084,7,257.0,Other,Bacterial,Prevotella bivia
+P084,8,292.0,Blood,Bacterial,"Klebsiella oxytoca (central line, peripheral)"
+P084,9,295.0,Plasma,Viral,EBV
+P085,1,13.0,Blood,Viral,CMV
+P086,1,40.0,Plasma,Viral,Epstein-Barr Virus
+P087,1,-6.0,Stool,Bacterial,C. difficile
+P088,1,97.0,Other,Viral,HSV-2 DNA
+P088,2,189.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P088,3,285.0,Stool,Viral,Norovirus
+P089,1,53.0,Other,Fungal,Pneumocystis DNA
+P089,2,56.0,Bronchoscopic,Bacterial,Quantitative Respiratory Culture/Smear Bronchial Aveolar Lavage (BAL)
+P089,3,56.0,Other,Viral,Respiratory Virus Panel with COVID-19
+P089,4,82.0,Plasma,Viral,Epstein-Barr Virus
+P089,5,82.0,Blood,Bacterial,Klebsiella pneumoniae
+P089,6,124.0,Blood,Viral,CMV
+P089,7,140.0,Plasma,Viral,EBV
+P089,8,201.0,Stool,Bacterial,C Diff
+P089,9,266.0,Nasal/Nasopharyngeal,Viral,RSV
+P089,10,327.0,Nasal/Nasopharyngeal,Viral,Coronavirus OC43
+P090,1,227.0,Blood,Bacterial,Staphylococcus epidermidis (peripheral)
+P091,1,15.0,Blood,Viral,CMV
+P091,2,36.0,Blood,Viral,Epstein-Barr Virus
+P091,3,98.0,Stool,Viral,Norovirus GI/GII
+P091,4,173.0,Other,Fungal,Candida glabrata
+P092,1,-4.0,Stool,Bacterial,C. difficile
+P092,2,19.0,Blood,Viral,CMV
+P092,3,38.0,Blood,Bacterial,Klebsiella variicola (peripheral)
+P092,4,41.0,Plasma,Viral,Epstein-Barr Virus
+P092,5,43.0,Blood,Bacterial,"Klebsiella variicola (central line, peripheral)"
+P092,6,53.0,Sputum,Bacterial,Pichia kudriavzevii (Candida krusei)
+P092,7,53.0,Sputum,Bacterial,Candida albicans
+P092,8,79.0,Stool,Bacterial,C Diff
+P092,9,82.0,Blood,Bacterial,Staphylococcus epidermidis (PICC)
+P092,10,82.0,Other,Fungal,Pichia kudriavzevii (Candida krusei)
+P092,11,82.0,Other,Fungal,Saccharomyces cerevisiae
+P092,12,128.0,Sputum,Fungal,"Pichia kudriavzevii (Candida krusei), Saccharomyces cerevisiae, Mycelia sterilia"
+P092,13,175.0,Other,Fungal,"Saccharomyces cerevisiae, Candida albicans"
+P092,14,-22.0,Nasal/Nasopharyngeal,Viral,Coronavirus OC43
+P093,1,17.0,Blood,Viral,CMV
+P094,1,19.0,Stool,Bacterial,C Diff
+P095,1,116.0,Stool,Bacterial,C Diff
+P095,2,119.0,Stool,Bacterial,C Diff
+P096,1,21.0,Blood,Viral,CMV
+P096,2,286.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 3
+P097,1,6.0,Blood,Bacterial,Staphylococcus epidermidis (central line)
+P097,2,27.0,Plasma,Viral,Epstein-Barr Virus
+P098,1,57.0,Plasma,Viral,Epstein-Barr Virus
+P098,2,148.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P099,1,-5.0,Stool,Bacterial,C. diff
+P099,2,11.0,Blood,Bacterial,Streptococcus mitis group (central line)
+P099,3,11.0,Blood,Bacterial,Streptococcus mitis group (peripheral)
+P099,4,96.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P100,1,-5.0,Stool,Bacterial,C. diff
+P100,2,83.0,Plasma,Viral,Epstein-Barr Virus
+P100,3,109.0,Plasma,Viral,BK Virus
+P100,4,112.0,Blood,Bacterial,Staphylococcus epidermidis (central line)
+P100,5,211.0,Blood,Bacterial,"Staphylococcus epidermidis, Klebsiella oxytoca (central line)"
+P100,6,211.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P101,0,,,,
+P102,0,,,,
+P103,0,,,,
+P104,1,89.0,Stool,Bacterial,C. diff
+P105,1,-7.0,Stool,Bacterial,Clostridium difficile
+P105,2,28.0,Other,Fungal,Candida albicans
+P105,3,28.0,,Viral,"HERPES SIMPLEX VIRUS 1, 2 DNA"
+P105,4,38.0,Urine,Bacterial,Klebsiella pneumoniae
+P105,5,40.0,Plasma,Viral,CMV
+P105,6,105.0,Other,Viral,Varicella Zoster
+P106,1,14.0,Other,Bacterial,Vancomycin Resistant Enterococcus
+P107,0,,,,
+P108,1,-6.0,Other,Bacterial,Vancomycin Resistant Enterococcus
+P108,2,-5.0,Stool,Bacterial,Clostridium difficile
+P109,0,,,,
+P110,0,,,,
+P111,0,,,,
+P113,0,,,,
+P114,0,,,,
+P115,0,,,,
+P116,1,-3.0,Blood,Bacterial,Pantoea agglomerans (central line)
+P116,2,-2.0,Blood,Bacterial,Bacillus cereus group (central line)
+P116,3,-1.0,Blood,Bacterial,Pantoea agglomerans
+P117,1,0.0,Stool,Bacterial,C diff
+P117,2,100.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 3
+P118,1,4.0,Stool,Bacterial,Campylobacter
+P118,2,4.0,Stool,Bacterial,E. coli
+P119,1,7.0,Other,Bacterial,Giardia lamblia
+P119,2,11.0,Other,Bacterial,Giardia lamblia
+P119,3,86.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P120,0,,,,
+P121,1,14.0,Other,Bacterial,VRE
+P121,2,334.0,Stool,Bacterial,C diff
+P122,0,,,,
+P123,1,266.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 3
+P124,1,4.0,Urine,Bacterial,E. coli
+P125,1,4.0,Stool,Bacterial,C. diff
+P126,0,,,,
+P127,0,,,,
+P128,0,,,,
+P129,0,,,,
+P130,1,22.0,Plasma,Viral,EBV
+P131,0,,,,
+P133,0,,,,
+P136,0,,,,
+P137,1,6.0,Stool,Bacterial,C. diff
+P138,0,,,,
+P141,0,,,,
+P143,1,10.0,Stool,Viral,Norovirus
+P143,2,314.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P144,1,2.0,Nasal/Nasopharyngeal,Viral,COVID-19
+P145,1,209.0,Urine,Bacterial,Staphylococcus epidermidis (urine)
+P145,2,209.0,Blood,Bacterial,Staphylococcus epidermidis (central line)
+P145,3,212.0,Blood,Bacterial,Mycobacterium chelonae species group (central line)
+P146,1,0.0,Stool,Viral,Norovirus
+P147,1,0.0,Stool,Bacterial,C. diff
+P148,1,15.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P148,2,17.0,Sputum,Fungal,Saccharomyces cerevisiae
+P149,1,318.0,Nasal/Nasopharyngeal,Viral,Parainfluenzae Virus 3
+P150,0,,,,
+P151,1,33.0,Blood,Viral,CMV
+P152,1,133.0,Urine,Bacterial,Klebsiella pneumoniae
+P153,1,-9.0,Stool,Bacterial,C. difficile
+P153,2,83.0,Stool,Bacterial,C Diff
+P153,3,337.0,Stool,Bacterial,C Diff
+P154,1,316.0,Nasal/Nasopharyngeal,Bacterial,Human Rhinovirus-Enterovirus
+P155,1,7.0,Blood,Bacterial,Streptococcus mitis group (peripheral)
+P156,0,,,,
+P157,0,,,,
+P158,0,,,,
+P159,1,375.0,Urine,Bacterial,Escherichia coli
+P159,2,10.0,Blood,Bacterial,Escherichia coli (central line)
+P159,3,26.0,Blood,Bacterial,Norovirus
+P159,4,107.0,Nasal/Nasopharyngeal,Viral,Coronavirus OC43 (not COVID-19)
+P159,5,107.0,Nasal/Nasopharyngeal,Viral,Coronavirus NL63 (not COVID-19)
+P160,0,,,,
+P161,1,9.0,Stool,Viral,Norovirus
+P162,0,,,,
+P163,1,-9.0,Urine,Bacterial,gram negative rod
+P163,2,15.0,Stool,Viral,Sapovirus
+P164,0,,,,
+P165,0,,,,
+P166,1,-6.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
+P167,0,,,,
+P168,1,-55.0,Blood,Bacterial,Bacillus cereus group
+P169,1,-22.0,Nasal/Nasopharyngeal,Viral,Human Rhinovirus-Enterovirus
