@@ -1,4 +1,3 @@
-# early_warning_signs.py
 from __future__ import annotations
 from pathlib import Path
 from dataclasses import dataclass

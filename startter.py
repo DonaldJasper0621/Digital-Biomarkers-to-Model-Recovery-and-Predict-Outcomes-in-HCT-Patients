@@ -1,37 +1,35 @@
 # === Milestone 1a: Intermediate Starter Pipeline ===
 # Builds two joinable datasets and saves clean CSVs.
+# build_two_datasets_simple.py
+# 目的：把原始檔合成兩個日級別資料集：physiological / psychological + 事件表
+# 重點：使用 keys union 當骨架，避免漏資料；僅 pandas/numpy
 
 import pandas as pd
 import numpy as np
-from pathlib import Path
 
-# 0) Paths ----------------------------------------------------------
-DATA_DIR = Path(".")  # change to your folder if needed
+DATA_DIR = "./Initial_data"
 
 
-def read_csv(name):
-    path = DATA_DIR / name
-    return pd.read_csv(path)
+# -------- 讀檔（不存在就回空表） ----------
+def read_or_empty(path):
+    try:
+        return pd.read_csv(path)
+    except Exception:
+        return pd.DataFrame()
 
 
-# 1) Load raw tables ------------------------------------------------
-demographic = read_csv("./Initial_data/demographic_data.csv")
-daily_steps = read_csv("./Initial_data/daily_steps.csv")
-daily_activity = read_csv("./Initial_data/daily_activity.csv")
-sleep_classic = read_csv("./Initial_data/sleep_classic.csv")
-sleep_stages = read_csv("./Initial_data/sleep_stages.csv")
-mood = read_csv("./Initial_data/mood.csv")
-promis = read_csv("./Initial_data/PROMIS_tscore.csv")
-outcome = read_csv("./Initial_data/outcome.csv")
-infections = read_csv("./Initial_data/infections.csv")
+demographic = read_or_empty(f"{DATA_DIR}/demographic_data.csv")
+daily_steps = read_or_empty(f"{DATA_DIR}/daily_steps.csv")
+daily_activity = read_or_empty(f"{DATA_DIR}/daily_activity.csv")
+sleep_classic = read_or_empty(f"{DATA_DIR}/sleep_classic.csv")
+sleep_stages = read_or_empty(f"{DATA_DIR}/sleep_stages.csv")
+mood = read_or_empty(f"{DATA_DIR}/mood.csv")
+promis = read_or_empty(f"{DATA_DIR}/PROMIS_tscore.csv")
+outcome = read_or_empty(f"{DATA_DIR}/outcome.csv")
+infections = read_or_empty(f"{DATA_DIR}/infections.csv")
+daily_hr = read_or_empty(f"{DATA_DIR}/daily_hr.csv")
 
-# Optional (if present in your drop)
-try:
-    daily_hr = read_csv("./Initial_data/daily_hr.csv")
-except FileNotFoundError:
-    daily_hr = pd.DataFrame()
-
-# 2) Light cleaning -------------------------------------------------
+# -------- 輕清理 ----------
 tables = [
     demographic,
     daily_steps,
@@ -47,92 +45,131 @@ tables = [
 
 for df in tables:
     if not df.empty and "STUDY_PRTCPT_ID" in df.columns:
-        df["STUDY_PRTCPT_ID"] = df["STUDY_PRTCPT_ID"].astype(str).str.strip()
+        df["STUDY_PRTCPT_ID"] = df["STUDY_PRTCPT_ID"].astype(str).strip()
+
+
+def to_num(df, col):
+    if col in df.columns:
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+
 
 for df in [daily_steps, daily_activity, sleep_classic, sleep_stages, mood, daily_hr]:
-    if not df.empty and "DaysFromTransplant" in df.columns:
-        df["DaysFromTransplant"] = pd.to_numeric(
-            df["DaysFromTransplant"], errors="coerce"
-        )
+    to_num(df, "DaysFromTransplant")
 
-# PROMIS labeled timepoints → approximate day index
 if "Timestamp" in promis.columns:
     promis["DaysFromTransplant_PROMIS"] = promis["Timestamp"].map(
         {"Baseline": 0, "Day30": 30, "Day120": 120}
     )
 
-# 3) Dataset 1: Physiological (day-level) ---------------------------
-# Backbone = daily_steps; change here if you prefer daily_activity as base.
+# -------- 用 keys union 當骨架（避免漏掉沒有 steps 的日子） ----------
 keys = ["STUDY_PRTCPT_ID", "DaysFromTransplant"]
-physio = daily_steps.copy()
+bases = []
+for d in [daily_steps, daily_activity, sleep_classic, sleep_stages, daily_hr]:
+    if not d.empty and set(keys).issubset(d.columns):
+        bases.append(d[keys])
+base = (
+    pd.concat(bases, axis=0).drop_duplicates() if bases else pd.DataFrame(columns=keys)
+)
+
+# -------- 建 Dataset 1: Physiological（日） ----------
+physio = base.copy()
 
 
-def take_cols(df, keep):
-    cols = [c for c in keep if c in df.columns]
-    return df[cols]
+def take(df, cols):
+    keep = [c for c in cols if c in df.columns]
+    return df[keep] if keep else pd.DataFrame(columns=cols)
 
 
-# Merge: daily_activity
-act_cols = keys + [
-    "sedentary",
-    "lightly_active",
-    "moderately_active",
-    "very_active",
-    "total_active_time",
-    "total_measured_time",
-    "percent_sedentary",
-    "percent_active",
-    "time_coverage",
-]
+# steps / activity / sleep / hr 依序 left merge 到骨架
+if not daily_steps.empty:
+    physio = physio.merge(
+        take(
+            daily_steps,
+            keys + ["total_steps", "n_measurements", "time_coverage", "Group"],
+        ),
+        on=keys,
+        how="left",
+    )
+
 if not daily_activity.empty:
-    physio = physio.merge(take_cols(daily_activity, act_cols), on=keys, how="outer")
+    physio = physio.merge(
+        take(
+            daily_activity,
+            keys
+            + [
+                "percent_active",
+                "sedentary",
+                "lightly_active",
+                "moderately_active",
+                "very_active",
+                "time_coverage",
+                "Group",
+            ],
+        ),
+        on=keys,
+        how="left",
+    )
 
-# Merge: sleep_stages
-stg_cols = keys + [
-    "DEEP_MIN",
-    "LIGHT_MIN",
-    "REM_MIN",
-    "WAKE_MIN",
-    "DEEP_COUNT",
-    "LIGHT_COUNT",
-    "REM_COUNT",
-    "WAKE_COUNT",
-]
-if not sleep_stages.empty:
-    physio = physio.merge(take_cols(sleep_stages, stg_cols), on=keys, how="outer")
-
-# Merge: sleep_classic
-cls_cols = keys + [
-    "sleep_duration",
-    "ASLEEP_VALUE",
-    "INBED_VALUE",
-    "ASLEEP_MIN",
-    "ASLEEP_COUNT",
-    "AWAKE_COUNT",
-    "AWAKE_MIN",
-    "RESTLESS_COUNT",
-    "RESTLESS_MIN",
-]
 if not sleep_classic.empty:
-    physio = physio.merge(take_cols(sleep_classic, cls_cols), on=keys, how="outer")
+    physio = physio.merge(
+        take(
+            sleep_classic,
+            keys + ["sleep_duration", "ASLEEP_MIN", "INBED_VALUE", "Group"],
+        ),
+        on=keys,
+        how="left",
+    )
 
-# Merge: daily_hr (optional)
-hr_cols = keys + [
-    "mean_hr",
-    "median_hr",
-    "min_hr",
-    "max_hr",
-    "sd_hr",
-    "morning_hr",
-    "afternoon_hr",
-    "evening_hr",
-    "night_hr",
-    "time_coverage",
-]
+if not sleep_stages.empty:
+    physio = physio.merge(
+        take(
+            sleep_stages,
+            keys
+            + [
+                "DEEP_MIN",
+                "LIGHT_MIN",
+                "REM_MIN",
+                "WAKE_MIN",
+                "DEEP_COUNT",
+                "LIGHT_COUNT",
+                "REM_COUNT",
+                "WAKE_COUNT",
+                "Group",
+            ],
+        ),
+        on=keys,
+        how="left",
+    )
+
 if not daily_hr.empty:
-    physio = physio.merge(take_cols(daily_hr, hr_cols), on=keys, how="left")
+    physio = physio.merge(
+        take(
+            daily_hr,
+            keys
+            + [
+                "mean_hr",
+                "median_hr",
+                "min_hr",
+                "max_hr",
+                "sd_hr",
+                "morning_hr",
+                "afternoon_hr",
+                "evening_hr",
+                "night_hr",
+                "time_coverage",
+                "Group",
+            ],
+        ),
+        on=keys,
+        how="left",
+    )
 
-# Add demographics
+# 衍生：睡眠效率
+if {"ASLEEP_MIN", "INBED_VALUE"}.issubset(physio.columns):
+    with np.errstate(divide="ignore", invalid="ignore"):
+        physio["sleep_efficiency"] = physio["ASLEEP_MIN"] / physio["INBED_VALUE"]
+
+# demographics（只保留一筆）
 demo_keep = [
     "STUDY_PRTCPT_ID",
     "age",
@@ -143,9 +180,9 @@ demo_keep = [
     "cg_hours",
     "transplant_type",
 ]
-for col in demo_keep:
-    if col not in demographic.columns:
-        demographic[col] = np.nan
+for c in demo_keep:
+    if c not in demographic.columns:
+        demographic[c] = np.nan
 
 physio = (
     physio.merge(
@@ -157,61 +194,52 @@ physio = (
     .reset_index(drop=True)
 )
 
-# 4) Dataset 2: Psychological/Behavioral (day-level) ----------------
+# -------- 建 Dataset 2: Psychological/Behavioral（日） ----------
 psych = mood.copy()
-psych = psych.merge(
-    demographic[demo_keep].drop_duplicates("STUDY_PRTCPT_ID"),
-    on="STUDY_PRTCPT_ID",
-    how="left",
-)
-
-# PROMIS joins on ID + Group; remains at Baseline/Day30/Day120
-if set(["STUDY_PRTCPT_ID", "Group"]).issubset(promis.columns):
-    p_cols = ["STUDY_PRTCPT_ID", "Group", "DaysFromTransplant_PROMIS"] + [
-        c for c in promis.columns if c.startswith("t_")
-    ]
-    psych = psych.merge(promis[p_cols], on=["STUDY_PRTCPT_ID", "Group"], how="left")
-    if "DaysFromTransplant" in psych.columns:
-        psych["is_promis_day"] = (
-            psych["DaysFromTransplant"] == psych["DaysFromTransplant_PROMIS"]
-        ).astype(int)
+if not psych.empty:
+    psych = psych.merge(
+        demographic[demo_keep].drop_duplicates("STUDY_PRTCPT_ID"),
+        on="STUDY_PRTCPT_ID",
+        how="left",
+    )
+    # PROMIS（仍保留在個別 timepoint，給對照用）
+    if set(["STUDY_PRTCPT_ID", "Group"]).issubset(promis.columns):
+        tcols = ["STUDY_PRTCPT_ID", "Group", "DaysFromTransplant_PROMIS"] + [
+            c for c in promis.columns if c.startswith("t_")
+        ]
+        tcols = [c for c in tcols if c in promis.columns]
+        psych = psych.merge(promis[tcols], on=["STUDY_PRTCPT_ID", "Group"], how="left")
+        if "DaysFromTransplant" in psych.columns:
+            psych["is_promis_day"] = (
+                psych["DaysFromTransplant"] == psych["DaysFromTransplant_PROMIS"]
+            ).astype(int)
 
 psych = psych.sort_values(keys).reset_index(drop=True)
 
-# 5) Events standardization ----------------------------------------
-# infections: rename date → DaysFromTransplant
+# -------- 事件表標準化 ----------
+# infections: date_culture_drawn -> DaysFromTransplant
 if "date_culture_drawn" in infections.columns:
     infections_std = infections.rename(
         columns={"date_culture_drawn": "DaysFromTransplant"}
     )
 else:
     infections_std = infections.copy()
+to_num(infections_std, "DaysFromTransplant")
 
-if "DaysFromTransplant" in infections_std.columns:
-    infections_std["DaysFromTransplant"] = pd.to_numeric(
-        infections_std["DaysFromTransplant"], errors="coerce"
-    )
-
-# outcomes: ensure *_date numeric
+# outcomes: *_date 轉數字
 outcomes_std = outcome.copy()
 for c in outcomes_std.columns:
     if c.endswith("_date"):
-        outcomes_std[c] = pd.to_numeric(outcomes_std[c], errors="coerce")
+        to_num(outcomes_std, c)
 
-# 6) Save outputs ---------------------------------------------------
-physio_out = DATA_DIR / "physiological_dataset_day.csv"
-psych_out = DATA_DIR / "psych_behavioral_dataset_day.csv"
-inf_out = DATA_DIR / "events_infections.csv"
-out_out = DATA_DIR / "events_outcomes.csv"
-
-physio.to_csv(physio_out, index=False)
-psych.to_csv(psych_out, index=False)
-infections_std.to_csv(inf_out, index=False)
-outcomes_std.to_csv(out_out, index=False)
+# -------- 輸出 ----------
+physio.to_csv("physiological_dataset_day.csv", index=False)
+psych.to_csv("psych_behavioral_dataset_day.csv", index=False)
+infections_std.to_csv("events_infections.csv", index=False)
+outcomes_std.to_csv("events_outcomes.csv", index=False)
 
 print("Saved:")
-print(physio_out)
-print(psych_out)
-print(inf_out)
-print(out_out)
-
+print("  physiological_dataset_day.csv")
+print("  psych_behavioral_dataset_day.csv")
+print("  events_infections.csv")
+print("  events_outcomes.csv")
