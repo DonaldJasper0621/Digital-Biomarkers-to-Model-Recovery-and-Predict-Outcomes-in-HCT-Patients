@@ -81,13 +81,6 @@ print("corr(sleep_efficiency, MOOD):", corr_sleep_eff_mood)
 if not mood_by_tert.empty:
     print("avg MOOD by activity tertile:\n", mood_by_tert)
 
-# --- 4) Write your Rationale to a text file ---
-RATIONALE = """Rationale:
-We selected these two datasets because they capture complementary dimensions of post-transplant recovery: physical functioning and psychological health. The physiological dataset provides continuous, objective measures from wearable devices, while the psychological/behavioral dataset offers self-reported outcomes and clinical events. Analyzing them together allows us to investigate whether changes in daily activity, heart rate, or sleep patterns are associated with mood, fatigue, or medical complications such as readmission and infection.
-This split also simplifies the data integration process while maintaining analytical depth. It creates a clear framework for exploring clinically relevant questions, such as whether early deviations in physiological signals can predict later declines in psychological well-being or adverse clinical outcomes. By joining these datasets, we can provide insights that support improved monitoring and intervention strategies for both patients and caregivers following transplantation.
-"""
-
-with open("Rationale.txt", "w") as f:
-    f.write(RATIONALE)
-
-print("\nWrote Rationale.txt")
+###Rationale:
+### We selected these two datasets because they capture complementary dimensions of post-transplant recovery: physical functioning and psychological health. The physiological dataset provides continuous, objective measures from wearable devices, while the psychological/behavioral dataset offers self-reported outcomes and clinical events. Analyzing them together allows us to investigate whether changes in daily activity, heart rate, or sleep patterns are associated with mood, fatigue, or medical complications such as readmission and infection.
+### This split also simplifies the data integration process while maintaining analytical depth. It creates a clear framework for exploring clinically relevant questions, such as whether early deviations in physiological signals can predict later declines in psychological well-being or adverse clinical outcomes. By joining these datasets, we can provide insights that support improved monitoring and intervention strategies for both patients and caregivers following transplantation.

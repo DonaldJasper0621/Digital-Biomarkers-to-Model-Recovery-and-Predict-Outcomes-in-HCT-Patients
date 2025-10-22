@@ -1,8 +1,7 @@
-# === Milestone 1a: Intermediate Starter Pipeline ===
 # Builds two joinable datasets and saves clean CSVs.
 # build_two_datasets_simple.py
 # 目的：把原始檔合成兩個日級別資料集：physiological / psychological + 事件表
-# 重點：使用 keys union 當骨架，避免漏資料；僅 pandas/numpy
+
 
 import pandas as pd
 import numpy as np
