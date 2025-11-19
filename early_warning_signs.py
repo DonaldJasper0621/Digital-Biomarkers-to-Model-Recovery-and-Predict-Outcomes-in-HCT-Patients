@@ -162,7 +162,6 @@ def plot_example_timeline(physio: pd.DataFrame, summary: pd.DataFrame, metric: s
 def main() -> None:
     physio, events = load_data()
     summary = compute_summary(physio, events)   # in-memory only
-    overview = build_overview(summary)          # only this CSV is saved
     if PLOT:
         plot_histograms(summary)
         if "percent_active" in METRICS and "percent_active" in physio.columns:
